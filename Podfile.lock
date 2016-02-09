@@ -1,5 +1,4 @@
 PODS:
-  - Alamofire (3.1.5)
   - Bolts (1.6.0):
     - Bolts/AppLinks (= 1.6.0)
     - Bolts/Tasks (= 1.6.0)
@@ -21,7 +20,6 @@ PODS:
   - RxSwift (2.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.0)
   - FBSDKCoreKit
   - FBSDKLoginKit
   - FBSDKShareKit
@@ -32,7 +30,6 @@ DEPENDENCIES:
   - RxSwift (~> 2.0)
 
 SPEC CHECKSUMS:
-  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   FBSDKCoreKit: aee20b6d9855f15b618d4fddd1a5ad45f5a4a59d
   FBSDKLoginKit: ec22dc49bd372b064e93d6773df4ffefb3a552a2

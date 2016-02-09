@@ -18,7 +18,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         
         let loginButton = FBSDKLoginButton()
         loginButton.center = self.view.center
-        loginButton.readPermissions = ["public_profile", "email", "user_friends", "user_posts", "user_photos"]
+        loginButton.readPermissions = ["user_posts"]
         loginButton.delegate = self
         
         self.view.addSubview(loginButton)
@@ -26,12 +26,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-    }
-    
-    func goToFriends() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewControllerWithIdentifier("navController") as! UINavigationController
-        self.presentViewController(vc, animated: true, completion: nil)
     }
     
     // MARK: Facebook Delegate Methods
@@ -48,7 +42,9 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.presentViewController(alert, animated: true, completion: nil)
         }
         else {
-            goToFriends()
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewControllerWithIdentifier("navController") as! UINavigationController
+            self.presentViewController(vc, animated: true, completion: nil)
         }
     }
     

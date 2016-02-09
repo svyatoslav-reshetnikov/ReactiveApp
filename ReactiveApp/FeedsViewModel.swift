@@ -50,10 +50,8 @@ class FeedsViewModel {
             clickObservable = input
                 .rx_modelSelected(Feed)
                 .flatMap { feed  in
-                    return API.getFeedInfo(feed.id).trackView(indicator)
-                }
-                .map { data in
-                    return data
+                    return API.getFeedInfo(feed.id)
+                        .trackView(indicator)
                 }
                 .catchError { error in
                     return wireframe.promptFor(String(error), cancelAction: "OK", actions: [])
